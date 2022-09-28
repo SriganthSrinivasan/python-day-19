@@ -2,6 +2,8 @@ from turtle import Turtle, Screen
 import random
 
 screen = Screen()
+screen.colormode(255)
+screen.title("Welcome to the turtle race!")
 screen.setup(width=500, height=400) #Setting window with fixed width and height
 screen.bgpic("sand.gif")
 user_input = screen.textinput(title="Tortoise Race",
@@ -18,6 +20,7 @@ for i in range(6):
     turtle.speed(10)
     turtle.color("SaddleBrown", colors[i])
     turtle.goto(x_axis, y_axis)
+    turtle.write(f"{colors[i]} Turtle", True, align="left")
     y_axis += 35
     all_turtles.append(turtle)
 
